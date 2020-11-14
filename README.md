@@ -1,4 +1,4 @@
-# FuzzyInference
+# Fuzzy Inference
 A Fuzzy Inference based prediction model for predicting number of customers attending a theme parks based on the weather.
 
 [Skfuzzy](https://pythonhosted.org/scikit-fuzzy/) librabry is used for fuzzy logic tools, like fuzzification, defuzzification and evaluation. 
