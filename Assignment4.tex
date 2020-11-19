@@ -1,0 +1,78 @@
+\documentclass {article}
+\usepackage {tikz}
+\usetikzlibrary {positioning}
+
+\usepackage{graphicx} 
+\pagecolor{white}
+
+\usepackage{tikz-qtree}
+\usepackage{float}
+
+\usepackage{titlesec}
+\titleformat{\section}{\centering\Large\bfseries}{}{0pt}{}
+
+\begin{document}
+\begin{titlepage}
+	
+	\centering
+	\includegraphics[height = 3in]{/Users/mayukh/Desktop/Subjects/DBMS/File/nsut_logo-2.png}
+	
+	\begin{center}
+	\line(1,0){350} \\
+	\huge\bfseries Artificial Intelligence\\
+	
+	\line(1,0){350} \\
+	\textsc{\Large Assignment - 4}\\ 
+	[0.2 cm]
+	
+	\Large\bfseries Name : Mayukh Chatterjee \\
+	\Large\bfseries Roll No: 2017UEC2190 \\
+	ECE - 3
+
+	\end{center}
+	
+\end{titlepage}
+
+
+\textbf{Q.Write a synopsis of Bayesian learning in terms of (1) relationship between prior probability of hypothesis, likelihoods of evidences, posterior probability of hypothesis, and maximum a-posteriori probability  (2) Naive Bayes classifier (3) Gaussian NB classifier (4) Multinomial NB classifier } \\
+\\
+Bayesian learning is a method in statistics used to infer probabilities by updating the probability of hypothesis as and when evidence or information becomes available. \\
+Bayesian learning interprets probability as a reasonable expectation representing a state of knowledge or as a quantification of belief instead of frequency or propensity of a phenomenon. \\
+\\
+\textbf{Posterior Probability} \\
+As defined above in Bayesian learning the state of knowledge is always updated or calculated based on new evidence. Here, the Posterior probability depends of the prior belief and the likelihood of the of the events. \\
+\\
+\textbf{Likelihood} \\
+Generally, for the parameter $\theta$ given the evidence $X$, $p(\theta | X)$ becomes the posterior probability while for the evidence $X$ given the parameter $\theta$, $p(X | \theta)$results in the likelihood function. 
+For continues distributions the probability results as $p(data | distribution)$ and likelihood results as $p(distribution | data)$. \\
+\\
+ \textbf{Relationship} \\
+The relation of posterior probability and likelihood is given as, \\
+$p(\theta | X) = \frac{p(X | \theta) * p(theta)}{p(X)}$ \\
+\\
+Where $p(\theta)$ is the prior probability and $p(X)$ is the normalising constant. $p(X)$ can be neglected to yield an approximation which is further useful for optimisation, explained in the next section. \\
+\\
+Hence, \\
+Posterior probability $\propto$ likelihood * prior probability \\
+\\
+\textbf{Maximum a-posteriori estimation} \\
+From the previous section it was inferred that $p(\theta | X) = p(X | \theta) . p(\theta)$, \\Maximising this quantity over a range of theta solves an optimisation problem for estimating the central tendency of the posterior probability. This maximisation technique is referred to as maximum a-posteriori(MAP) estimation. \\
+In MAP, a post estimation such as a moment of the distribution is calculated, such as mode which makes the optimisation a tractable approximation. 
+\cleardoublepage
+\textbf{Naive Bayes Classification}\\
+\\
+The general term Naive Bayes refers the the strong independence assumptions in the model, rather than the particular distribution of each feature. A Naive Bayes model assumes that each of the features it uses are conditionally independent of one another given some class. To calculate the probability of observing features $f_1$ through $f_n$, given some class $c$, under the Naive Bayes assumption the following holds: \\
+\\
+$p(f_1,f_2.....,f_n | c) = \prod_{i=1}^{n} p(f_i | c) $ \\
+\\
+When Naive Bayes model is used to classfiy a new specimen it results in a simpler posterior probability: \\
+\\
+$p(c | f_1,f_2.....,f_n) \propto p(c)p(f_1 | c).....p(f_n | c)$ \\
+\\
+Although the major drawback for this is the initial assumption of these factors being independent of each other is rarely true, but surprisingly the naive Bayes classifier works in many cases in classification problems. \\
+\\
+The main types instances of Naive Bayes classifiers are Gaussian and Multinomial classifiers. \\ 
+Theses instances define the characteristics of $p(f_i | c)$, Multinomial distribution or Gaussian Distribution. \\
+\\
+
+\end{document}
